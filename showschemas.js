@@ -2,10 +2,14 @@
 var fs=require('fs')
 var verJson = fs.readFileSync('data/nanomine_template_versions.json',{'encoding':'utf8'})
 var ver = JSON.parse(verJson)
-//console.log(Object.keys(ver[0]))
-ver.forEach(function(v,a,i){
-//  console.log('current: ' + v.current+' isDeleted: ' + v.isDeleted + ' id: '+v.id);
-})
+function showVersions(showKeys) {
+  ver.forEach(function(v,a,i){
+    console.log('current: ' + v.current+' isDeleted: ' + v.isDeleted + ' id: '+v.id);
+  })
+  if(showKeys) {
+    console.log(Object.keys(ver[0]))
+  }
+}
 
 function isTemplateActive(tmplId) {
   var rv = false;
@@ -17,6 +21,8 @@ function isTemplateActive(tmplId) {
   })
   return rv;
 }
+
+//showVersions();
 
 var tmplJson = fs.readFileSync('data/nanomine_templates.json',{'encoding':'utf8'})
 var tmpl = JSON.parse(tmplJson)
