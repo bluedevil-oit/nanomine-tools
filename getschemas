@@ -1,0 +1,6 @@
+#!/bin/bash
+mkdir data 2>/dev/null
+curl --basic -u ${NM_PROD_USER}:${NM_PROD_PWD} -o data/nanomine_template_versions.json ${NM_HOST}:${NM_PORT}/rest/templates/versions/select/all
+curl --basic -u ${NM_PROD_USER}:${NM_PROD_PWD} -o data/nanomine_templates.json ${NM_HOST}:${NM_PORT}/rest/templates/select/all
+
+

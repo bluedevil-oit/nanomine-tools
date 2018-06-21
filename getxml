@@ -1,0 +1,3 @@
+#!/bin/bash
+mkdir data 2>/dev/null
+curl --basic -u ${NM_TEST_USER}:${NM_TEST_PWD} -o data/nanomine_xml.json ${NM_HOST}:${NM_PORT}/rest/explore/select/all?dataformat=xml
