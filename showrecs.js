@@ -12,7 +12,7 @@ var xmlJson=fs.readFileSync('data/nanomine_xml.json',{'encoding':'utf8'})
 
 var pna=JSON.parse(xmlJson);
 
-
+//list out the xmls for a schema and optionally search for text within each xml
 pna.forEach(
   function(v,i,a){
     fs.writeFileSync('data/'+v.schema+'-'+v.title,v.content);
