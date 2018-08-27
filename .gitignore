@@ -1,3 +1,6 @@
 data/
 setup
+node_modules/
+package-lock.json
+
 
