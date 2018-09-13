@@ -21,7 +21,8 @@ pna.forEach(
       //nothing. Probably already exists.
     }
     fs.writeFileSync('data/'+v.schema+'/'+v.title,v.content);
-    if(v.schema=='5b71eb00e74a1d7c81bec6c7'){ //081218
+    if( 1 == 1) { //All
+    //if(v.schema=='5b71eb00e74a1d7c81bec6c7'){ //081218
     //if(v.schema=='5b5f3559e74a1d4cdbaef171'){ //072618
     //if(v.schema=='5b1ebeb9e74a1d61fc43654d'){ //060718
     //if(v.schema=='5abe807ce74a1d06fd9943a0'){ //033018
