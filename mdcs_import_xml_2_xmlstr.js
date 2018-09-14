@@ -1,3 +1,10 @@
+/*
+NOTE: non-optimal solution since it requires downloading all the XMLs via rest first using the getschemas/getxml
+  curl scripts. Once the files exist, then this code can be used to go through the xmldata collection and
+  create an xml_str field to hold the associated xml directly (currently, the collection holds a BSON rep only).
+  The code to do this more directly by reading the BSON and creating the xml_str inline will exist in the
+  nanomine project as a conversion from 1.3.0 to 1.3.0-nm-sp-dev1 (or whatever the first release of the new app becomes)
+ */
 const mongo = require('mongodb').MongoClient
 const objectId = require('mongodb').ObjectId
 
