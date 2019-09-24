@@ -20,6 +20,13 @@ let docValid = xmlDoc.validate(xsdDoc)
 console.log('Document valid: ' + docValid)
 if (docValid === false) {
   console.log(dump(xmlDoc.validationErrors))
+} else {
+  console.log('Doc is valid.')
+  if (Array.isArray(xmlDoc.validationErrors)) {
+    console.log('   validationErrors.length is: ' + xmlDoc.validationErrors.length)
+  } else {
+    console.log('   validationErrors is: ' + xmlDoc.validationErrors)
+  }
 }
 
 // console.log('newDoc type: ' + dump(newDoc))
