@@ -4,9 +4,14 @@ const util = require('util')
 
 const dataDir = './data/5b71eb00e74a1d7c81bec6c7/'
 
-const xmlIn = dataDir + 'L101_S2_Dang_2007.xml'
+
+let xmlIn = dataDir + 'L101_S2_Dang_2007.xml'
 const xsdIn = './data/' + 'PNC_schema_081218.xsd'
 
+if (process.argv.length > 1) {
+  xmlIn = process.argv[2]
+}
+console.log('Processing: ' + xmlIn)
 let xmlInFile = fs.readFileSync(xmlIn, 'utf8')
 let xsdInFile = fs.readFileSync(xsdIn, 'utf8')
 
